@@ -1,0 +1,420 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Competition Website</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="#top">
+        <span class="brand-name">Real World AVSE Challenge</span>
+        <span class="brand-tag">ISCSLP 2026</span>
+      </a>
+      <nav class="nav" aria-label="主导航">
+        <a href="#top">Home</a>
+        <a href="#news">News</a>
+        <a href="#about">Introduction</a>
+        <a href="#registration">Registration</a>
+        <a href="#tracks">Tracks</a>
+        <a href="#data">Data</a>
+        <a href="#baseline">Baseline</a>
+        <a href="#evaluation">Evaluation</a>
+        <a href="#organizers">Organizers</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </header>
+
+    <main class="page" id="top">
+      <section class="hero" aria-labelledby="site-title">
+        <img
+          class="hero-logo"
+          src="challenge_icon.png"
+          alt="Real-World AVSE Challenge logo"
+        />
+        <div class="hero-text">
+          <h1 id="site-title">
+            Real-World Audio-Visual Speech Enhancement (AVSE) Challenge
+          </h1>
+          <p class="intro">
+            A challenge that pushes audio-visual speech enhancement beyond
+            simulated-speech, clean-video benchmarks toward real-world robustness.
+          </p>
+          <div class="hero-actions">
+            <a class="btn btn-primary btn-icon" href="https://github.com/Real-World-AVSE/Baseline" target="_blank" rel="noopener">
+              <svg viewBox="0 0 16 16" width="18" height="18" fill="currentColor" aria-hidden="true">
+                <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/>
+              </svg>
+              <span>Code on GitHub</span>
+            </a>
+            <a class="btn btn-primary" href="#contact">Contact</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="block" id="news" aria-labelledby="news-title">
+        <h2 id="news-title" class="title-with-icon">
+          News
+          <span class="title-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+              stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M3 11l11-4v10L3 14v-3z" />
+              <path d="M9.5 16.8a2.5 2.5 0 0 1-4.8-.8" />
+              <path d="M17.5 8.5l3-1.3" />
+              <path d="M18 12h3" />
+              <path d="M17.5 15.5l3 1.3" />
+            </svg>
+          </span>
+        </h2>
+        <ul class="news-list">
+          <li>
+            <time class="news-date" datetime="2026-06-22">June 22, 2026</time>
+            <p class="news-text">
+              Registration is now open! The dataset link will be sent to your
+              registered email shortly. If you do not receive it, please contact
+              us immediately via email or WeChat.
+            </p>
+          </li>
+          <li>
+            <time class="news-date" datetime="2026-06-15">June 15, 2026</time>
+            <p class="news-text">
+              The Real-World AVSE Challenge has been accepted by ISCSLP 2026.
+            </p>
+          </li>
+        </ul>
+        <button type="button" class="news-toggle" hidden>Show all news</button>
+      </section>
+
+      <section class="block" id="about" aria-labelledby="about-title">
+        <h2 id="about-title">Introduction</h2>
+        <p>
+          <strong>The Real-World AVSE Challenge</strong> focuses on Audio-Visual
+          Speech Enhancement (AVSE) under genuinely real-world conditions. Unlike
+          conventional benchmarks built on the "clean video plus synthetic speech"
+          paradigm, it emphasizes naturally occurring speech overlap, authentic
+          reverberation, and ambient noise, while also confronting the visual
+          degradations common in practice: occlusion, low quality, missing
+          frames, blur and far-field. Through two complementary tracks on real-world mixed
+          scenarios and visual degradation, the Challenge aims to move AVSE from
+          the "ideal video" setting toward real-world deployment.
+        </p>
+      </section>
+
+      <section class="block" id="registration" aria-labelledby="registration-title">
+        <h2 id="registration-title">Registration</h2>
+        <ul class="news-list">
+          <li>
+            <span class="news-date">Registration Form</span>
+            <p class="news-text">
+              Please register via this
+              <a href="https://forms.gle/GYL1SHRpAdVPNanaA" target="_blank"
+                rel="noopener">Google Form</a>.
+            </p>
+          </li>
+        </ul>
+      </section>
+
+      <section class="block" id="tracks" aria-labelledby="tracks-title">
+        <h2 id="tracks-title">Tracks</h2>
+        <div class="tracks">
+          <article class="track">
+            <h3>Track 1 — Real-World Mixed Scenarios</h3>
+            <p>
+              This track provides multi-speaker audio-visual data captured naturally in
+              real environments, with speech mixed organically rather than synthetically.
+              It offers a comprehensive test of model robustness and practicality in
+              realistic settings, aiming to bridge the gap between simulation and reality.
+            </p>
+          </article>
+          <article class="track">
+            <h3>Track 2 — Visual Degradation</h3>
+            <p>
+              Built on relevant public datasets, this track constructs a set of visually
+              degraded samples, covering occlusion, low quality, missing frames, and blur,
+              to systematically assess how well models hold up when the visual modality
+              becomes unreliable.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section class="block" id="data" aria-labelledby="data-title">
+        <h2 id="data-title">Data</h2>
+        <p>
+          <strong>The Real-World AVSE Challenge</strong> provides an official
+          development set and testing set for each track. The provided data falls
+          into two cases: single-speaker speech and two-speaker simultaneous
+          speech, and all audio files are naturally recorded. The recordings
+          involve seven groups of distinct speakers (two per group, with no gender
+          restriction). For both Track 1 and Track 2, the speakers in the
+          development and test sets are completely non-overlapping. We place no
+          restrictions on the training data.
+        </p>
+
+        <div class="data-sets">
+          <article class="data-set">
+            <h3>Training Set</h3>
+            <p>
+              This Challenge does not specify any official training set.
+              Participants are free to use any open-source datasets, as well as
+              any pre-trained models and data augmentation methods. (Regardless of
+              which datasets, models, or methods are used, participants must
+              clearly describe them in the final paper submission.)
+            </p>
+          </article>
+
+          <article class="data-set">
+            <h3>Development Set</h3>
+            <div class="track-split">
+              <div class="track-col">
+                <h4>Track 1</h4>
+                <p>
+                  The speech falls into two types. One is mix, which
+                  comes from naturally recorded real-world mixtures; it has no
+                  clean reference, so only non-intrusive (reference-free) metrics
+                  are provided. The other is remix, formed by summing two clean
+                  single-speaker segments, which supports both reference-based and
+                  reference-free metrics. (Both mix and remix contribute to the
+                  final evaluation. remix plays a key role, since its ground truth
+                  makes reference-based metrics possible.) The dev set is drawn
+                  from three of the seven speaker groups.
+                </p>
+              </div>
+              <div class="track-col">
+                <h4>Track 2</h4>
+                <p>
+                  The development set reuses the Track 1 development data, likewise
+                  divided into mix and remix, with visual degradations applied to
+                  the target speakers' face videos. There are five types of visual
+                  degradation: low quality, occlusion, frame freezing,
+                  desynchronization, and blackout. It also includes the original
+                  3-meter far-field visual material from the data. The data comes
+                  from three of the seven speaker groups.
+                </p>
+              </div>
+            </div>
+          </article>
+
+          <article class="data-set">
+            <h3>Testing Set</h3>
+            <div class="track-split">
+              <div class="track-col">
+                <h4>Track 1</h4>
+                <p>
+                  The testing set follows the same mixing scheme as the
+                  development set, with data drawn from the remaining four unseen
+                  speaker groups, ensuring no overlap between the development and
+                  testing sets.
+                </p>
+              </div>
+              <div class="track-col">
+                <h4>Track 2</h4>
+                <p>
+                  The testing set likewise reuses the Track 1 testing data, with
+                  visual degradations applied to the target speakers' face videos.
+                  The data again comes from the remaining four unseen speaker
+                  groups, ensuring no overlap between the development and testing
+                  sets.
+                </p>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <h3 class="data-demo-title">Visual Degradation Examples</h3>
+        <div class="video-gallery">
+          <figure class="video-item">
+            <video src="Low_resolution.mp4" autoplay loop muted playsinline preload="metadata"></video>
+            <figcaption>Low Quality</figcaption>
+          </figure>
+          <figure class="video-item">
+            <video src="Occlusion.mp4" autoplay loop muted playsinline preload="metadata"></video>
+            <figcaption>Occlusion</figcaption>
+          </figure>
+          <figure class="video-item">
+            <video src="Frame_freeze.mp4" autoplay loop muted playsinline preload="metadata"></video>
+            <figcaption>Frame Freezing</figcaption>
+          </figure>
+          <figure class="video-item">
+            <video src="Far_field.mp4" autoplay loop muted playsinline preload="metadata"></video>
+            <figcaption>Far-Field</figcaption>
+          </figure>
+          <figure class="video-item">
+            <video src="Blackout.mp4" autoplay loop muted playsinline preload="metadata"></video>
+            <figcaption>Blackout</figcaption>
+          </figure>
+        </div>
+
+        <aside class="data-note">
+          <span class="data-note-label">Note</span>
+          <div class="data-note-body">
+            <p>
+              For more details, please refer to the
+              <a href="https://github.com/Real-World-AVSE/Baseline" target="_blank" rel="noopener">Dataset Layout</a>
+              section in our GitHub repository.
+            </p>
+            <p>
+              The dataset download link will be sent to the email address provided
+              during registration. If you do not receive it, please contact us
+              promptly via email or WeChat.
+            </p>
+          </div>
+        </aside>
+      </section>
+
+      <section class="block" id="baseline" aria-labelledby="baseline-title">
+        <h2 id="baseline-title">Baseline</h2>
+        <p>
+          The baseline system is <strong>AV-ConvTasNet</strong>, a two-stream
+          audio-visual separator that recovers a single target speaker from a
+          mixture, conditioned on that speaker's lip movements. The audio branch
+          is a Conv-TasNet separator operating on the raw waveform, while the video
+          branch is a frozen ResNet-34 lip-reading encoder (a 3D convolutional
+          stem followed by ResNet-34). These visual features are temporally
+          aligned to the audio bottleneck and fused with the audio representation,
+          allowing the model to use the target speaker's lip video to guide
+          separation. Given a mixture waveform and the corresponding lip frames,
+          the model directly outputs the enhanced target speech.
+        </p>
+
+        <figure class="baseline-figure">
+          <img src="Backbone.png" alt="Baseline model backbone architecture" />
+          <figcaption>Baseline model architecture.</figcaption>
+        </figure>
+
+        <aside class="data-note">
+          <span class="data-note-label">Note</span>
+          <p>
+            For more details about the baseline, please refer to the
+            <a href="https://github.com/Real-World-AVSE/Baseline" target="_blank" rel="noopener">The Baseline System</a>
+            section in our GitHub repository.
+          </p>
+        </aside>
+      </section>
+
+      <section class="block" id="evaluation" aria-labelledby="evaluation-title">
+        <h2 id="evaluation-title">Evaluation</h2>
+        <p>
+          Details about the evaluation metrics, ranking criteria, and submission
+          procedure will be released here. Stay tuned.
+        </p>
+      </section>
+
+      <section class="block" id="organizers" aria-labelledby="organizers-title">
+        <h2 id="organizers-title">Organizers</h2>
+        <ul class="organizers">
+          <li>
+            <span class="org-name">Kai Li</span>
+            <span class="org-affil">Tsinghua University</span>
+          </li>
+          <li>
+            <span class="org-name">Wenze Ren</span>
+            <span class="org-affil">National Taiwan University</span>
+          </li>
+          <li>
+            <span class="org-name">Junjie Li</span>
+            <span class="org-affil">The Hong Kong Polytechnic University</span>
+          </li>
+          <li>
+            <span class="org-name">Cheng Yu</span>
+            <span class="org-affil">Ohio State University</span>
+          </li>
+          <li>
+            <span class="org-name">Peijun Yang</span>
+            <span class="org-affil">Wuhan University</span>
+          </li>
+          <li>
+            <span class="org-name">Haibin Wu</span>
+            <span class="org-affil">Meta</span>
+          </li>
+          <li>
+            <span class="org-name">Szu-Wei Fu</span>
+            <span class="org-affil">Nvidia</span>
+          </li>
+          <li>
+            <span class="org-name">Wen-Chin Huang</span>
+            <span class="org-affil">Nagoya University</span>
+          </li>
+          <li>
+            <span class="org-name">Hsin-Min Wang</span>
+            <span class="org-affil">Academia Sinica</span>
+          </li>
+          <li>
+            <span class="org-name">Xiaolin Hu</span>
+            <span class="org-affil">Tsinghua University</span>
+          </li>
+          <li>
+            <span class="org-name">Ming Li</span>
+            <span class="org-affil">The Chinese University of Hong Kong, Shenzhen</span>
+          </li>
+          <li>
+            <span class="org-name">DeLiang Wang</span>
+            <span class="org-affil">The Chinese University of Hong Kong, Shenzhen</span>
+          </li>
+          <li>
+            <span class="org-name">Yu Tsao</span>
+            <span class="org-affil">Academia Sinica</span>
+          </li>
+        </ul>
+      </section>
+
+      <section class="block" id="contact" aria-labelledby="contact-title">
+        <h2 id="contact-title">Contact</h2>
+        <p class="contact-intro">
+          If you have any questions, feel free to contact us at:
+        </p>
+        <ul class="news-list">
+          <li>
+            <span class="news-date">Email</span>
+            <p class="news-text">
+              <a href="mailto:realworldavse_iscslp2026@googlegroups.com">realworldavse_iscslp2026@googlegroups.com</a>
+            </p>
+          </li>
+          <li>
+            <span class="news-date">WeChat</span>
+            <div class="news-text">
+              <details class="contact-collapse">
+                <summary>Show WeChat group QR code</summary>
+                <img class="contact-qr" src="group.jpg" alt="WeChat group QR code" />
+              </details>
+            </div>
+          </li>
+        </ul>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p>© 2026 Real-World AVSE Challenge · ISCSLP 2026</p>
+    </footer>
+
+    <script>
+      (function () {
+        var VISIBLE = 3; // 默认显示的最新条数
+        var list = document.querySelector(".news-list");
+        var toggle = document.querySelector(".news-toggle");
+        if (!list || !toggle) return;
+
+        var items = Array.prototype.slice.call(list.children);
+        if (items.length <= VISIBLE) return; // 条数不够，无需按钮
+
+        var expanded = false;
+        function render() {
+          items.forEach(function (li, i) {
+            li.hidden = !expanded && i >= VISIBLE;
+          });
+          toggle.textContent = expanded
+            ? "Show less"
+            : "Show all news (" + items.length + ")";
+        }
+
+        toggle.hidden = false;
+        render();
+        toggle.addEventListener("click", function () {
+          expanded = !expanded;
+          render();
+        });
+      })();
+    </script>
+  </body>
+</html>
