@@ -21,6 +21,8 @@
         <a href="#data">Data</a>
         <a href="#baseline">Baseline</a>
         <a href="#evaluation">Evaluation</a>
+        <a href="#timeline">Timeline</a>
+        <a href="#leaderboard">Leaderboard</a>
         <a href="#organizers">Organizers</a>
         <a href="#contact">Contact</a>
       </nav>
@@ -284,14 +286,150 @@
             section in our GitHub repository.
           </p>
         </aside>
+
+        <div class="baseline-actions">
+          <a class="btn btn-primary btn-icon" href="https://huggingface.co/JusperLee/Real-World-AVSE-Baseline-Track1" target="_blank" rel="noopener">
+            <svg viewBox="0 0 95 88" width="22" height="20" aria-hidden="true">
+              <path d="M47.21 76.5a34.75 34.75 0 1 0 0-69.5 34.75 34.75 0 0 0 0 69.5Z" fill="#FFD21E"/>
+              <path d="M81.96 41.75a34.75 34.75 0 1 1-69.5 0 34.75 34.75 0 0 1 69.5 0Zm3 0a37.75 37.75 0 1 0-75.5 0 37.75 37.75 0 0 0 75.5 0Z" fill="#FF9D0B"/>
+              <path d="M58.5 32.29c1.28.44 1.78 3.06 3.07 2.38a5 5 0 1 0-6.76-2.07c.61 1.15 2.55-.69 3.7-.32ZM34.95 32.29c-1.28.44-1.79 3.06-3.07 2.38a5 5 0 1 1 6.76-2.07c-.61 1.15-2.56-.69-3.7-.32Z" fill="#3A3B45"/>
+              <path d="M46.96 56.29c9.83 0 13-8.76 13-13.26 0-2.33-1.57-1.6-4.09-.36-2.33 1.15-5.46 2.74-8.91 2.74-7.19 0-13-6.88-13-2.38s3.17 13.26 13 13.26Z" fill="#3A3B45"/>
+              <path d="M70.71 37a3.25 3.25 0 1 0 0-6.5 3.25 3.25 0 0 0 0 6.5ZM24.46 37a3.25 3.25 0 1 0 0-6.5 3.25 3.25 0 0 0 0 6.5Z" fill="#FF9D0B"/>
+            </svg>
+            <span>Track 1 Checkpoint on Hugging Face</span>
+          </a>
+          <a class="btn btn-primary btn-icon" href="https://huggingface.co/JusperLee/Real-World-AVSE-Baseline-Track2" target="_blank" rel="noopener">
+            <svg viewBox="0 0 95 88" width="22" height="20" aria-hidden="true">
+              <path d="M47.21 76.5a34.75 34.75 0 1 0 0-69.5 34.75 34.75 0 0 0 0 69.5Z" fill="#FFD21E"/>
+              <path d="M81.96 41.75a34.75 34.75 0 1 1-69.5 0 34.75 34.75 0 0 1 69.5 0Zm3 0a37.75 37.75 0 1 0-75.5 0 37.75 37.75 0 0 0 75.5 0Z" fill="#FF9D0B"/>
+              <path d="M58.5 32.29c1.28.44 1.78 3.06 3.07 2.38a5 5 0 1 0-6.76-2.07c.61 1.15 2.55-.69 3.7-.32ZM34.95 32.29c-1.28.44-1.79 3.06-3.07 2.38a5 5 0 1 1 6.76-2.07c-.61 1.15-2.56-.69-3.7-.32Z" fill="#3A3B45"/>
+              <path d="M46.96 56.29c9.83 0 13-8.76 13-13.26 0-2.33-1.57-1.6-4.09-.36-2.33 1.15-5.46 2.74-8.91 2.74-7.19 0-13-6.88-13-2.38s3.17 13.26 13 13.26Z" fill="#3A3B45"/>
+              <path d="M70.71 37a3.25 3.25 0 1 0 0-6.5 3.25 3.25 0 0 0 0 6.5ZM24.46 37a3.25 3.25 0 1 0 0-6.5 3.25 3.25 0 0 0 0 6.5Z" fill="#FF9D0B"/>
+            </svg>
+            <span>Track 2 Checkpoint on Hugging Face</span>
+          </a>
+        </div>
       </section>
 
       <section class="block" id="evaluation" aria-labelledby="evaluation-title">
         <h2 id="evaluation-title">Evaluation</h2>
         <p>
-          Details about the evaluation metrics, ranking criteria, and submission
-          procedure will be released here. Stay tuned.
+          Submissions are assessed with a suite of complementary metrics covering
+          signal quality, perceptual quality, intelligibility, and speaker
+          identity. Each metric is computed on the scenes indicated above using
+          the listed backend.
         </p>
+
+        <div class="table-wrap">
+          <table class="eval-table">
+            <thead>
+              <tr>
+                <th scope="col">Metric</th>
+                <th scope="col">Type</th>
+                <th scope="col">Scenes</th>
+                <th scope="col">Backend</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>SI-SDR / PESQ / STOI</td>
+                <td>Reference-based</td>
+                <td>Remix only</td>
+                <td>torchmetrics</td>
+              </tr>
+              <tr>
+                <td>UTMOS</td>
+                <td>No-reference MOS</td>
+                <td>Mix + remix</td>
+                <td>UTMOSv2</td>
+              </tr>
+              <tr>
+                <td>DNSMOS</td>
+                <td>No-reference P.835</td>
+                <td>Mix + remix</td>
+                <td>torchmetrics ONNX</td>
+              </tr>
+              <tr>
+                <td>CER</td>
+                <td>Chinese character error rate</td>
+                <td>Mix + remix</td>
+                <td>Fun-ASR-Nano-2512</td>
+              </tr>
+              <tr>
+                <td>Speaker similarity</td>
+                <td>Identity preservation</td>
+                <td>Mix + remix</td>
+                <td>WeSpeaker ResNet34</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <aside class="data-note">
+          <span class="data-note-label">Note</span>
+          <p>
+            For the baseline results on the development set, please refer to the
+            <a href="https://github.com/Real-World-AVSE/Baseline" target="_blank" rel="noopener">Evaluation</a>
+            section in our GitHub repository.
+          </p>
+        </aside>
+      </section>
+
+      <section class="block" id="timeline" aria-labelledby="timeline-title">
+        <h2 id="timeline-title">Timeline</h2>
+        <p class="timeline-note">
+          All dates are tentative and may be subject to change. Times are in
+          AoE (Anywhere on Earth).
+        </p>
+        <ol class="timeline">
+          <li class="timeline-item">
+            <time class="timeline-date" datetime="2026-06-22">2026.06.22</time>
+            <div class="timeline-content">Challenge Registration</div>
+          </li>
+          <li class="timeline-item">
+            <time class="timeline-date" datetime="2026-06-23">2026.06.23</time>
+            <div class="timeline-content">
+              Release of Baseline Systems, Training Dataset References, and
+              Development Dataset (Track 1 and Track 2)
+            </div>
+          </li>
+          <li class="timeline-item">
+            <time class="timeline-date" datetime="2026-07-12">2026.07.12</time>
+            <div class="timeline-content">
+              Testing set released and leaderboard submissions open (each team
+              may submit up to three entries per day)
+            </div>
+          </li>
+          <li class="timeline-item">
+            <time class="timeline-date" datetime="2026-07-17">2026.07.17</time>
+            <div class="timeline-content">Registration Closes</div>
+          </li>
+          <li class="timeline-item">
+            <time class="timeline-date" datetime="2026-07-24">2026.07.24</time>
+            <div class="timeline-content">Leaderboard Frozen</div>
+          </li>
+          <li class="timeline-item">
+            <time class="timeline-date" datetime="2026-07-27">2026.07.27</time>
+            <div class="timeline-content">Announcement of Final Rankings</div>
+          </li>
+          <li class="timeline-item">
+            <time class="timeline-date" datetime="2026-08-03">2026.08.03</time>
+            <div class="timeline-content">Paper Submission Deadline</div>
+          </li>
+          <li class="timeline-item">
+            <time class="timeline-date" datetime="2026-08-31">2026.08.31</time>
+            <div class="timeline-content">Paper Acceptance Notification</div>
+          </li>
+          <li class="timeline-item">
+            <time class="timeline-date" datetime="2026-09-21">2026.09.21</time>
+            <div class="timeline-content">Camera-ready Deadline</div>
+          </li>
+        </ol>
+      </section>
+
+      <section class="block" id="leaderboard" aria-labelledby="leaderboard-title">
+        <h2 id="leaderboard-title">Leaderboard</h2>
+        <p>The leaderboard and testing set will open at a later date.</p>
       </section>
 
       <section class="block" id="organizers" aria-labelledby="organizers-title">
@@ -406,6 +544,33 @@
         toggle.addEventListener("click", function () {
           expanded = !expanded;
           render();
+        });
+      })();
+
+      // 高亮"当前进行中"的时间线节点（取不晚于今天的最近一项）
+      (function () {
+        var items = Array.prototype.slice.call(
+          document.querySelectorAll(".timeline-item")
+        );
+        if (!items.length) return;
+
+        var today = new Date();
+        today.setHours(0, 0, 0, 0);
+
+        var currentIndex = -1;
+        items.forEach(function (item, i) {
+          var t = item.querySelector(".timeline-date");
+          if (!t) return;
+          var d = new Date(t.getAttribute("datetime") + "T00:00:00");
+          if (d <= today) currentIndex = i;
+        });
+
+        // 所有节点都还没到，则高亮第一个即将到来的节点
+        if (currentIndex < 0) currentIndex = 0;
+
+        items.forEach(function (item, i) {
+          if (i < currentIndex) item.classList.add("is-past");
+          else if (i === currentIndex) item.classList.add("is-current");
         });
       })();
     </script>
