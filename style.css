@@ -168,6 +168,13 @@ h1 {
   }
 }
 
+.leaderboard-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  margin: 24px 0;
+}
+
 .btn {
   display: inline-block;
   padding: 12px 24px;
