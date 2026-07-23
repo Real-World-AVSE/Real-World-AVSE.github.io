@@ -259,6 +259,11 @@ h1 {
   align-items: flex-start;
 }
 
+/* display:flex 会覆盖 hidden 属性的默认 display:none，需显式处理 */
+.news-list li[hidden] {
+  display: none;
+}
+
 .news-date {
   flex: none;
   width: 150px;
@@ -394,6 +399,14 @@ h1 {
   font-size: 15px;
   font-variant-numeric: tabular-nums;
   line-height: 1.6;
+}
+
+/* 改期节点：被划掉的原日期 */
+.timeline-date-old {
+  display: block;
+  color: #9aa3ab;
+  font-weight: 600;
+  text-decoration: line-through;
 }
 
 .timeline-content {
@@ -578,6 +591,16 @@ h1 {
 .data-note a:hover {
   color: #b9421f;
   border-bottom-color: #b9421f;
+}
+
+/* News 区置顶通知：沿用 Note 卡片样式，置于新闻列表上方且不参与折叠 */
+.news-notice {
+  margin: 0 0 24px;
+}
+
+.news-notice p {
+  font-size: 16px;
+  color: #17202a;
 }
 
 /* Baseline 模型架构图 */
