@@ -409,6 +409,11 @@ h1 {
   text-decoration: line-through;
 }
 
+/* 第二次改期时被划掉的日期 */
+.timeline-date-old2 {
+  color: #c77f5e;
+}
+
 .timeline-content {
   flex: 1;
   margin: 0;
@@ -601,6 +606,24 @@ h1 {
 .news-notice p {
   font-size: 16px;
   color: #17202a;
+}
+
+/* 多条置顶通知合并在同一外框内，条目间用虚线分隔 */
+.news-notice-multi {
+  flex-direction: column;
+  align-items: stretch;
+}
+
+.news-notice-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+}
+
+.news-notice-item + .news-notice-item {
+  margin-top: 16px;
+  padding-top: 16px;
+  border-top: 1px dashed #dfa78f;
 }
 
 /* Baseline 模型架构图 */
