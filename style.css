@@ -606,6 +606,9 @@ h1 {
 .news-notice p {
   font-size: 16px;
   color: #17202a;
+  /* 左对齐:justify 遇到 ISCSLP2026 这类长词会把上一行词距拉得很开 */
+  text-align: left;
+  text-wrap: pretty;
 }
 
 /* 多条置顶通知合并在同一外框内，条目间用虚线分隔 */
